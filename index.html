@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>鍾旻庭 Rita｜行政與專案管理 Resume</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ 新增：讓「完整進修紀錄總表」排版穩定（不會影響你原本style.css） -->
+  <style>
+    /* ===== Continuing Education Portfolio (嵌入版) ===== */
+    .ce-wrapper {
+      margin-top: 26px;
+      background: #faf8f4;
+      border-radius: 16px;
+      padding: 28px 22px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .ce-intro {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.85;
+      margin: 0 0 18px;
+    }
+
+    .ce-wrapper details {
+      background: #f6f1ea;
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin: 12px 0;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      transition: background 0.2s ease;
+    }
+
+    .ce-wrapper details[open] { background: #f1dfc8; }
+
+    .ce-wrapper summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 15px;
+      list-style: none;
+    }
+
+    .ce-wrapper summary::-webkit-details-marker { display: none; }
+
+    .ce-list {
+      margin-top: 12px;
+      padding-left: 18px;
+      columns: 2;
+      column-gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .ce-list { columns: 1; }
+    }
+
+    .ce-list li {
+      margin-bottom: 10px;
+      break-inside: avoid;
+      line-height: 1.6;
+    }
+
+    .ce-list a {
+      color: #6a4e2d;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .ce-list a:hover { text-decoration: underline; }
+
+    .ce-tag {
+      display: inline-block;
+      margin-left: 8px;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #e6d3b1;
+      color: #5a4325;
+      vertical-align: middle;
+    }
+
+    .ce-note {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    /* ✅ 你原本的 course-links grid 保留，但補一個「空清單不顯示」避免看起來像壞掉 */
+    #extra-course-links:empty::before {
+      content: "（尚未載入連結）";
+      color: #777;
+      font-size: 13px;
+    }
+/* ===== Continuing Education Search ===== */
+.ce-search {
+  margin: 16px 0 22px;
+}
+
+.ce-search input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.15);
+  font-size: 14px;
+}
+
+.ce-search input:focus {
+  outline: none;
+  border-color: #b0894f;
+}  
+  </style>
+</head>
+
+<body>
+  <!-- 語言切換按鈕 -->
+  <button id="lang-toggle">EN / 中文</button>
+
+  <!-- Hero 首屏 -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-photo reveal-up">
+        <img src="https://acade.must.edu.tw/files/generated-image_20251117164949_160.png" alt="Rita portrait">
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-name reveal-up">鍾旻庭 Rita</h1>
+
+        <h2 class="hero-role reveal-up">
+          Administrative Operations & Project Management
+        </h2>
+
+        <p class="hero-tagline reveal-up">
+          我專注於設計<strong>穩定、可追蹤、可複製</strong>的行政與專案系統，
+          讓組織在高複雜度與高負荷下仍能順暢運作。
+        </p>
+
+        <div class="hero-cta reveal-up">
+          <a href="#experience">View Experience</a>
+          <a href="#projects" class="ghost">View Projects</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="line"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- About 關於我 -->
+    <section class="section" id="about">
+      <div class="section-inner">
+        <h3 data-i18n="about_title">關於我 About Me</h3>
+        <p>
+          目前任職於明新科技大學雙語教育中心行政助理，負責畢業門檻審查、英語測驗規劃以及教育部計畫行政，
+          實務經驗橫跨大學行政、非營利組織、飯店服務與社區計畫，累積超過 10 年行政與專案執行歷練。
+        </p>
+        <p>
+          擅長問題拆解、流程設計與跨單位協作，能從前期規劃、執行到結案報告完整掌握，並在高壓時程中維持穩定與精準。
+          希望在更大型或制度完善的組織中，承接跨部門專案與流程優化任務，成為穩定推動營運效率的核心行政人才。
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills 核心能力 -->
+    <section class="section" id="skills">
+      <div class="section-inner">
+        <h3 data-i18n="skills_title">核心能力 Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-card">行政流程設計與 SOP 建置</div>
+          <div class="skill-card">專案管理與跨單位協作</div>
+          <div class="skill-card">大型測驗與活動規劃（千人規模）</div>
+          <div class="skill-card">教育部計畫行政（經費、採購、結案與報告）</div>
+          <div class="skill-card">資料治理與個資作業流程（蒐集、保存、稽核）</div>
+          <div class="skill-card">文件系統化與資料整理（Excel／Google Workspace）</div>
+          <div class="skill-card">利害關係人溝通與需求分析</div>
+        </div>
+      </div>
+    </section>
+
+<!-- Experience 工作經歷（互動 Timeline） -->
+<section class="section" id="experience">
+  <div class="section-inner">
+    <h3 data-i18n="exp_title">工作經歷 Experience</h3>
+
+    <div class="timeline">
+
+      <details class="timeline-item" open>
+        <summary class="toggle">
+          明新科技大學｜雙語教育中心 — 行政助理｜2023 – 至今
+        </summary>
+        <ul class="content">
+          <li>建立中心行政流程與 SOP，使審查、公告與協作更具系統性與可追溯性。</li>
+          <li>每學期處理約 600–1000 件外語能力畢業門檻審查，建立一致審查標準。</li>
+          <li>規劃千人大一英語前測，負責場地、動線、監考與資訊公告。</li>
+          <li>支援教育部計畫行政（經費、採購、公文、結案）。</li>
+          <li>建立個資作業流程，通過校內外個資稽核。</li>
+        </ul>
+      </details>
+
+      <details class="timeline-item">
+        <summary class="toggle">
+          財團法人台北市教會聚會所 — 行政與活動企劃｜2021 – 2023
+        </summary>
+        <ul class="content">
+          <li>文書、會議記錄與資料管理。</li>
+          <li>零用金與帳務管理，確保財務可稽核。</li>
+          <li>規劃兒童夏令營、品格課程（30–50 人）。</li>
+          <li>支援 100–250 人講座與研討會。</li>
+        </ul>
+      </details>
+
+      <details class="timeline-item">
+        <summary class="toggle">
+          教會生命成長培訓計畫 — 活動與社區計畫執行｜2019 – 2021
+        </summary>
+        <ul class="content">
+          <li>執行五週偏鄉服務計畫，服務超過 2,000 人。</li>
+          <li>撰寫成果與結案報告。</li>
+          <li>成果發表會企劃與跨團隊協作。</li>
+        </ul>
+      </details>
+
+      <details class="timeline-item">
+        <summary class="toggle">
+          金府大飯店股份有限公司 — 服務與住宿管理｜2018
+        </summary>
+        <ul class="content">
+          <li>入住流程與房務協調。</li>
+          <li>旅客需求與客訴處理。</li>
+        </ul>
+      </details>
+
+      <details class="timeline-item">
+        <summary class="toggle">
+          南臺科技大學｜應用英語系 — 計畫助理｜2016 – 2017
+        </summary>
+        <ul class="content">
+          <li>行政表單、公文與活動支援。</li>
+          <li>研討會與英語競賽協作。</li>
+        </ul>
+      </details>
+
+      <details class="timeline-item">
+        <summary class="toggle">
+          南臺科技大學 — 教育部專案計畫助理｜2015 – 2016
+        </summary>
+        <ul class="content">
+          <li>英語六學分加註班行政與結案。</li>
+          <li>專案網站內容管理。</li>
+        </ul>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Projects 專案亮點 -->
+    <section class="section" id="projects">
+      <div class="section-inner">
+        <h3 data-i18n="proj_title">專案亮點 Projects</h3>
+
+        <div class="project-grid">
+          <button class="project-card" data-project="english-test">
+            <h4>千人級英語前測流程系統化</h4>
+            <p>從高風險人工作業，轉為可複製的標準流程</p>
+          </button>
+
+          <button class="project-card" data-project="character-education">
+            <h4>品格教育與親子活動專案</h4>
+            <p>招生與執行流程全面優化，建立穩定運作模式</p>
+          </button>
+
+          <button class="project-card" data-project="rural-service">
+            <h4>偏鄉五週服務計畫（嘉義溪口）</h4>
+            <p>跨團隊協作的長期服務專案與成果整合</p>
+          </button>
+
+          <button class="project-card" data-project="moe-project">
+            <h4>教育部計畫行政（南臺科大應英系）</h4>
+            <p>完整支援課程、資格、經費與結案流程</p>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Continuing Education & Certifications -->
+    <section class="section" id="education">
+      <div class="section-inner">
+           <h3>📚 Continuing Education & Certifications</h3>
+
+        <p class="cert-intro">
+          我持續透過國際線上平台與專業機構進修，進修主軸聚焦於
+          <strong>教育行政、專案管理、雲端工具、資料治理、AI 應用與英語專業溝通</strong>，
+          以強化在高教與行政場域中的實務能力。
+        </p>
+<!-- ========================= -->
+<!-- 📚 Continuing Education : COURSES -->
+<!-- ========================= -->
+
+<div class="ce-wrapper">
+<div class="ce-filter-toggle">
+  <button type="button" data-filter="all" class="active">全部顯示</button>
+  <button type="button" data-filter="course">只看課程</button>
+  <button type="button" data-filter="cert">只看證書</button>
+<nav class="ce-toc">
+  <strong>🧭 快速跳轉</strong>
+  <a href="#ce-cloud">☁️ Cloud / Data / Security</a>
+  <a href="#ce-ai">🤖 AI / Data / Automation</a>
+  <a href="#ce-marketing">🧾 Marketing / Ads / Analytics</a>
+  <a href="#ce-design">🎨 Design / UX</a>
+  <a href="#ce-pm">📊 Project Management</a>
+  <a href="#ce-english">🌏 English / Communication</a>
+  <a href="#ce-education">🎓 Education / Educator</a>
+</nav>
+
+</div>
+
+
+  <!-- ☁️ Cloud / Data / Security -->
+  <div class="ce-section" data-type="course">
+    <details open id="ce-cloud">
+      <summary>
+        ☁️ Cloud / Data / Security
+        <span class="ce-count"></span>
+        <span class="ce-sub">（雲端・資料治理・資訊安全）</span>
+      </summary>
+      <ul class="ce-list">
+        <li><a href="https://drive.google.com/file/d/1nrPoVtFJe84cJXaeEXjdAgcwOGh9oInO/view" target="_blank">Google Workspace Data Governance</a><span class="ce-tag">Governance</span></li>
+        <li><a href="https://drive.google.com/file/d/1T7F08DuaoGXM2VYVYTPV2Iy4cPTFilia/view" target="_blank">A Tour of Google Cloud Hands-on Labs</a><span class="ce-tag">GCP</span></li>
+        <li><a href="https://drive.google.com/file/d/19zGMDh72kDTegQ99hmB5X9z0R_SzDSwF/view" target="_blank">Digital Transformation with Google Cloud</a><span class="ce-tag">Cloud</span></li>
+        <li><a href="https://drive.google.com/file/d/1yyETgMU10zjz9YNiXjSaxSozR_hYuhHc/view" target="_blank">Exploring Data Transformation with Google Cloud</a><span class="ce-tag">Data</span></li>
+        <li><a href="https://drive.google.com/file/d/1BSY6mF51UimhN45sx7nWOROsTzQakxYX/view" target="_blank">Google Cloud Fundamentals: Core Infrastructure</a><span class="ce-tag">GCP</span></li>
+        <li><a href="https://drive.google.com/file/d/1arYEZgbfCmMjQtRwNAxtbptbyaRYX0X7/view" target="_blank">Foundations of Cybersecurity</a><span class="ce-tag">Security</span></li>
+        <li><a href="https://drive.google.com/file/d/1WWAvdRs0YmnX4rv-PVPGz_0rEadc92G1/view" target="_blank">Palo Alto Networks Cybersecurity Foundation</a><span class="ce-tag">Security</span></li>
+        <li><a href="https://drive.google.com/file/d/1I6lx2fr9Ip0v240O4W7nt55WMzPZmYC5/view" target="_blank">Create Machine Learning Models in Microsoft Azure</a><span class="ce-tag">Azure</span></li>
+        <li><a href="https://drive.google.com/file/d/1FXa6KaRi6vH4rphROHuBiD1XrA6T1-z5/view" target="_blank">Data Storage in Microsoft Azure</a><span class="ce-tag">Azure</span></li>
+        <li><a href="https://drive.google.com/file/d/1skJz0RmI9nxP34_CDzIM1hzj2hnwih89/view" target="_blank">Connect Your Services with Microsoft Azure Service Bus</a><span class="ce-tag">Integration</span></li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- 📊 Project Management / Leadership -->
+  <div class="ce-section" data-type="course">
+    <details open id="ce-pm">
+      <summary>
+        📊 Project Management / Leadership
+        <span class="ce-count"></span>
+        <span class="ce-sub">（專案管理・組織與領導）</span>
+      </summary>
+      <ul class="ce-list">
+        <li><a href="https://drive.google.com/file/d/1MYkrQSMuMT2Rhrhlh_erPlRzjQCMLgOY/view" target="_blank">Certified Associate in Project Management (CAPM®) – Unit 1</a><span class="ce-tag">PMI</span></li>
+        <li><a href="https://drive.google.com/file/d/1BBJpWbZZa5fzMPMWyazMLOY1gRlLHRXe/view" target="_blank">CAPM® – Unit 2</a><span class="ce-tag">PMI</span></li>
+        <li><a href="https://drive.google.com/file/d/1MkFMeYNiW9f_WJWJ1vgoqVVN3O5jD61L/view" target="_blank">CAPM® – Unit 3</a><span class="ce-tag">PMI</span></li>
+        <li><a href="https://drive.google.com/file/d/1KhtbGlaJsLMI06eWwtpj_RdCCwqxX7Ua/view" target="_blank">CAPM® – Unit 4</a><span class="ce-tag">PMI</span></li>
+        <li><a href="https://drive.google.com/file/d/11mdlRy9zBfQPMGbmwzkn41E_iFfFtO_3/view" target="_blank">CAPM® – Unit 5</a><span class="ce-tag">PMI</span></li>
+        <li><a href="https://drive.google.com/file/d/1vyCRzJc4lhBz8VOiq1-n4UDlGVoibJcx/view" target="_blank">CAPM® – Unit 6</a><span class="ce-tag">PMI</span></li>
+        <li><a href="https://drive.google.com/file/d/1Nr8X_3RjgrCLvsZYLhriWKFgmRE-RJ-d/view" target="_blank">CAPM® – Unit 7</a><span class="ce-tag">PMI</span></li>
+        <li><a href="https://drive.google.com/file/d/1joaPnsLXsUBXaLnvKEc51VcS1Vk3YIBq/view" target="_blank">CAPM® – Unit 8</a><span class="ce-tag">PMI</span></li>
+        <li><a href="https://drive.google.com/file/d/19CXjRKB2nQ3LhJzdRZoX1N38LZiNLyQK/view" target="_blank">CAPM® Complete Professional Certificate</a><span class="ce-tag">PMI</span></li>
+        <li><a href="https://drive.google.com/file/d/1UBUqnhhZEubXFV3PNCyNnkWQTGtGe9Y2/view" target="_blank">Foundations of Project Management</a><span class="ce-tag">PM</span></li>
+        <li><a href="https://drive.google.com/file/d/10T6R0G7L6RUqVd4ln00zJynU4moxPFcG/view" target="_blank">Create a High-Performing Team</a><span class="ce-tag">Leadership</span></li>
+        <li><a href="https://drive.google.com/file/d/14owYJ2KCqRmCtxgmy9YbWBg-uGup2HHo/view" target="_blank">Google People Management Essentials</a><span class="ce-tag">Management</span></li>
+        <li><a href="https://drive.google.com/file/d/1EvMznt6X9m0mm1t_UeTb32Zw5p-7p66J/view" target="_blank">Grow as a Manager</a><span class="ce-tag">Management</span></li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- 🤖 AI / Data / Automation -->
+  <div class="ce-section" data-type="course">
+    <details open id="ce-ai">
+      <summary>
+        🤖 AI / Data / Automation
+        <span class="ce-count"></span>
+        <span class="ce-sub">（人工智慧・資料分析・流程自動化）</span>
+      </summary>
+      <ul class="ce-list">
+        <li><a href="https://drive.google.com/file/d/1tcry5Hb_0xz8SPPZG8b-xmS53oTtL1c8/view" target="_blank">Google AI Essentials（Professional Certificate）</a><span class="ce-tag">AI</span></li>
+        <li><a href="https://drive.google.com/file/d/1tF3W-VqvHrScB1VYM5_XqzK3bFLe9YrM/view" target="_blank">Generative AI Content Creation</a><span class="ce-tag">GenAI</span></li>
+        <li><a href="https://drive.google.com/file/d/18elUSZasbNNGVm0F514fVyJfjZyXclMJ/view" target="_blank">Discover the Art of Prompting</a><span class="ce-tag">Prompt</span></li>
+        <li><a href="https://drive.google.com/file/d/1fwGSMkwvfPJ20YZmlbv4MPlmZ3WoO_Z0/view" target="_blank">Use AI Responsibly</a><span class="ce-tag">Ethics</span></li>
+        <li><a href="https://drive.google.com/file/d/1MMZpKi-Q2NXMJMIebktywCKTPqO5qC-A/view" target="_blank">Microsoft Azure Machine Learning for Data Scientists</a><span class="ce-tag">ML</span></li>
+        <li><a href="https://drive.google.com/file/d/1GimB-2sd57N8gpt4oqMrkWKV3B2TaKbX/view" target="_blank">Crash Course on Python</a><span class="ce-tag">Python</span></li>
+        <li><a href="https://drive.google.com/file/d/11dFx75mDDALbMbyaq_lkdnX59ks6tUty/view" target="_blank">Introduction to AI</a><span class="ce-tag">AI</span></li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- 🎨 Design / UX / Digital Tools -->
+  <div class="ce-section" data-type="course">
+    <details open id="ce-design">
+      <summary>
+        🎨 Design / UX / Digital Tools
+        <span class="ce-count"></span>
+        <span class="ce-sub">（設計思維・使用者體驗・數位工具）</span>
+      </summary>
+      <ul class="ce-list">
+        <li><a href="https://drive.google.com/file/d/1b3dxbWBJhCgRJF_fRqL8ArFoEY1W36Xv/view" target="_blank">Adobe Graphic Designer</a><span class="ce-tag">Design</span></li>
+        <li><a href="https://drive.google.com/file/d/1NGloCegl_Iaew3ZPae2RH3if1wlUQvxZ/view" target="_blank">Adobe Marketing Specialist</a><span class="ce-tag">Marketing</span></li>
+        <li><a href="https://drive.google.com/file/d/1ZKQ0ME9bVHL8_8Cq10y5kNlZ1sdTtEkE/view" target="_blank">Design Fundamentals with AI</a><span class="ce-tag">AI Design</span></li>
+        <li><a href="https://drive.google.com/file/d/1pDYyHiPZNKKNa7TuitJCSDH8LVfFDtWF/view" target="_blank">Design Thinking for Innovation</a><span class="ce-tag">Design Thinking</span></li>
+        <li><a href="https://drive.google.com/file/d/16A1-C6ef-3D3t_5xoAqdXqJ6Ki00mv-J/view" target="_blank">Foundations of User Experience (UX) Design</a><span class="ce-tag">UX</span></li>
+        <li><a href="https://drive.google.com/file/d/1H8hbxd0U3IGIWox7GhXmE0rQ7sMZOFd4/view" target="_blank">Fundamentals of UI/UX Design</a><span class="ce-tag">UI/UX</span></li>
+        <li><a href="https://drive.google.com/file/d/1CLKHdkWDB3Uz0D-WxqqQqbLMAUGe7ScH/view" target="_blank">Graphic Design</a><span class="ce-tag">Design</span></li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- 🌏 English / Communication -->
+  <div class="ce-section" data-type="course">
+    <details open id="ce-english">
+      <summary>
+        🌏 English / Communication
+        <span class="ce-count"></span>
+        <span class="ce-sub">（專業英語・職場溝通與寫作）</span>
+      </summary>
+      <ul class="ce-list">
+        <li><a href="https://drive.google.com/file/d/1g3duFx0yOhtTDPS2D2Heq3g28ATFXwlI/view" target="_blank">English for Career Development</a><span class="ce-tag">English</span></li>
+        <li><a href="https://drive.google.com/file/d/1e2qnpUS2VL5hIQM6CPv7O-jP4Ke5V4Wh/view" target="_blank">Improve Your English Communication Skills</a><span class="ce-tag">English</span></li>
+        <li><a href="https://drive.google.com/file/d/1b-S5jCEAug-aYAp1SDRLfW7W_nQpsQpr/view" target="_blank">Speak English Professionally</a><span class="ce-tag">English</span></li>
+        <li><a href="https://drive.google.com/file/d/1MN6N8zgYh1dJRGLmnKNtrc6tcuIJrVKX/view" target="_blank">Build Your Professional ePortfolio in English</a><span class="ce-tag">Writing</span></li>
+        <li><a href="https://drive.google.com/file/d/14uE2AqbOqlAChjbDEqcGY_GO39E88GRY/view" target="_blank">Write Professional Emails in English</a><span class="ce-tag">Writing</span></li>
+      </ul>
+    </details>
+  </div>
+
+</div>
+<!-- ========================= -->
+<!-- 🧾 Continuing Education : CERTIFICATES -->
+<!-- ========================= -->
+
+<div class="ce-wrapper">
+
+  <!-- 🧾 Digital Marketing / Ads / Analytics -->
+  <div class="ce-section" data-type="cert">
+    <details open id="ce-marketing">
+      <summary>
+        🧾 Digital Marketing / Ads / Analytics
+        <span class="ce-count"></span>
+        <span class="ce-sub">（數位行銷・廣告・成效分析）</span>
+      </summary>
+      <ul class="ce-list">
+        <li><a href="https://skillshop.credential.net/e03fb50a-28a8-43ff-b8d8-4befacba7e48" target="_blank">Get to Know Advertising with Google</a><span class="ce-tag">Google Ads</span></li>
+        <li><a href="https://skillshop.credential.net/f240e1b2-15b9-4dfc-a662-829c85a9ccad" target="_blank">認識 Google 廣告服務</a><span class="ce-tag">Google Ads</span></li>
+        <li><a href="https://skillshop.credential.net/a5389007-b989-4f59-b6b4-94f80ac65762" target="_blank">Google Ads 影片廣告認證</a><span class="ce-tag">Video Ads</span></li>
+        <li><a href="https://skillshop.credential.net/0383afdf-3195-4707-976d-c56836c87dc5" target="_blank">Google Ads 搜尋廣告認證</a><span class="ce-tag">Search Ads</span></li>
+        <li><a href="https://skillshop.credential.net/b8a7a2c9-3554-416e-9d91-43b42bf72169" target="_blank">Google Ads 多媒體廣告認證</a><span class="ce-tag">Display</span></li>
+        <li><a href="https://skillshop.credential.net/5de0d9b3-e407-47e9-a4a5-c6523009abb2" target="_blank">Google Ads 應用程式廣告認證</a><span class="ce-tag">App Ads</span></li>
+        <li><a href="https://skillshop.credential.net/53fd4978-6bfb-42f3-933d-744938a461ac" target="_blank">Google Ads 廣告素材認證</a><span class="ce-tag">Creative</span></li>
+
+        <li><a href="https://skillshop.credential.net/363517fb-ae23-4c1d-9dc0-bd883500aa2b" target="_blank">Google Analytics Certification</a><span class="ce-tag">GA</span></li>
+        <li><a href="https://skillshop.credential.net/3f538351-a735-4731-8cc4-f1bf346bc8eb" target="_blank">Google Analytics（分析）認證</a><span class="ce-tag">GA</span></li>
+        <li><a href="https://skillshop.credential.net/9732a67f-6799-409c-b673-5f6f118b9afc" target="_blank">開始使用 Google Analytics (GA4)</a><span class="ce-tag">GA4</span></li>
+        <li><a href="https://skillshop.credential.net/f400e958-0c0c-41b3-9b68-f5f0f545bfb0" target="_blank">管理 GA4 資料並瞭解如何閱讀報表</a><span class="ce-tag">GA4</span></li>
+        <li><a href="https://skillshop.credential.net/a0915667-141f-4f94-9b62-8ce988e363bc" target="_blank">Manage GA4 Data and Learn to Read Reports</a><span class="ce-tag">GA4</span></li>
+        <li><a href="https://skillshop.credential.net/abd3263b-8ee6-46b2-a5e5-40869fb5251c" target="_blank">Dive Deeper into GA4 Data and Reports</a><span class="ce-tag">GA4</span></li>
+        <li><a href="https://skillshop.credential.net/56709aa3-0e38-4a47-bd4c-2a15e8f8cb5f" target="_blank">Use GA4 with other Tools and Data Sources</a><span class="ce-tag">GA4</span></li>
+
+        <li><a href="https://skillshop.credential.net/62b0c0d5-f74f-4440-89ea-5fa8a70aff4e" target="_blank">Search Ads 360 認證測驗</a><span class="ce-tag">SA360</span></li>
+        <li><a href="https://skillshop.credential.net/45f93ef8-7a8b-49d9-8f12-afa1278bb5d9" target="_blank">Display & Video 360 認證測驗</a><span class="ce-tag">DV360</span></li>
+        <li><a href="https://skillshop.credential.net/0ed98d1c-5ae5-4d08-be0e-40831a14828c" target="_blank">開始使用 Google AdMob</a><span class="ce-tag">AdMob</span></li>
+        <li><a href="https://skillshop.credential.net/feecd984-6533-4266-9594-f908b733b9f7" target="_blank">透過 Google Ad Manager 提高廣告收益</a><span class="ce-tag">Ad Manager</span></li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- ⚙️ Workflow / Productivity -->
+  <div class="ce-section" data-type="cert">
+    <details open id="ce-workflow">
+      <summary>
+        ⚙️ Workflow / Productivity Tools
+        <span class="ce-count"></span>
+        <span class="ce-sub">（流程管理・工作效率工具）</span>
+      </summary>
+      <ul class="ce-list">
+        <li><a href="https://certifications.asana.com/a1d3e2d2-4732-4b20-894a-25c35a380f9c" target="_blank">Workflow Specialist Certificate</a><span class="ce-tag">Asana</span></li>
+        <li><a href="https://certifications.asana.com/ff1dbf12-a9c8-44bd-8d7f-796dc51bb452" target="_blank">Asana Administrator Certificate</a><span class="ce-tag">Asana</span></li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- 🎓 Education / AI / Classroom -->
+  <div class="ce-section" data-type="cert">
+    <details open id="ce-education">
+      <summary>
+        🎓 Education / AI / Classroom
+        <span class="ce-count"></span>
+        <span class="ce-sub">（教育認證・AI 教學應用）</span>
+      </summary>
+      <ul class="ce-list">
+        <li><a href="https://edu.google.accredible.com/9ed90aba-c0d9-44dd-ab98-702fb481f2d8" target="_blank">Google Certified Educator Level 2</a><span class="ce-tag">Education</span></li>
+        <li><a href="https://edu.google.accredible.com/9ca9a83e-9119-4e21-8d3f-9bf3e40de1d2" target="_blank">Gemini Certified Educator</a><span class="ce-tag">AI</span></li>
+        <li><a href="https://drive.google.com/file/d/18Gcav-eP9G5dpCIcUido5aBSkqaJ_hEI/view" target="_blank">AI in the Classroom – Badge</a><span class="ce-tag">AI</span></li>
+        <li><a href="https://drive.google.com/file/d/1-uMVrvzDbZv_sLP4xMVsMPV1xCafE3Bl/view" target="_blank">AI in the Classroom</a><span class="ce-tag">AI</span></li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- 🛡 ISO / Quality / Safety -->
+  <div class="ce-section" data-type="cert">
+    <details open id="ce-iso">
+      <summary>
+        🛡 ISO / Quality & Safety Systems
+        <span class="ce-count"></span>
+        <span class="ce-sub">（品質・職安管理系統）</span>
+      </summary>
+      <ul class="ce-list">
+        <li><a href="https://drive.google.com/file/d/14VzwCy2nSKSMmL2CzNQRk9OC6pGr_sVz/view" target="_blank">ISO 9001:2015 品質管理系統－內部稽核員訓練</a><span class="ce-tag">ISO</span></li>
+        <li><a href="https://drive.google.com/file/d/1sCm1KZnVlATgyM-OVJ_7F4B-1GDvwgqd/view" target="_blank">ISO 45001:2018 職業安全衛生管理系統－內部稽核員訓練</a><span class="ce-tag">ISO</span></li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- 🌱 Language / Cultural -->
+  <div class="ce-section" data-type="cert">
+    <details open id="ce-language">
+      <summary>
+        🌱 Language / Cultural Certification
+        <span class="ce-count"></span>
+        <span class="ce-sub">（語言與文化認證）</span>
+      </summary>
+      <ul class="ce-list">
+        <li><a href="https://drive.google.com/file/d/1XqroQiTYzfMFSMpdBzDmgKNdmuQoTg6x/view" target="_blank">母語認證（太魯閣族）高中級</a><span class="ce-tag">Language</span></li>
+      </ul>
+    </details>
+  </div>
+
+</div>
+
+    <p class="cert-note">
+      🔗 完整證書與數位徽章請見：
+      <a href="https://www.credly.com/users/min-ting-zhong.2d9bde9e/badges" target="_blank" rel="noopener">
+        Credly 個人頁面
+      </a>
+    </p>
+
+  </div>
+</section>
+    <!-- Traits & Goals -->
+    <section class="section" id="traits">
+      <div class="section-inner">
+        <h3 data-i18n="traits_title">個人特質與自我期許 Traits & Goals</h3>
+        <p>
+          在高負荷情境中仍能維持高品質與精準度，擅長拆解問題、優化流程與建立制度，重視細節與可追蹤性。
+          具備換位思考與高度協作能力，喜歡讓團隊的工作更有效率、更有秩序。
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="section-inner">
+        <h3 data-i18n="contact_title">聯絡方式 Contact</h3>
+        <p>Email：<a href="mailto:rihata0408@gmail.com">rihata0408@gmail.com</a></p>
+        <p>工作信箱：<a href="mailto:rihata0408@must.edu.tw">rihata0408@must.edu.tw</a></p>
+        <p>Phone：<a href="tel:+886901111761">0901-111-761</a></p>
+
+        <p>
+          🔗 <a href="https://www.linkedin.com/in/min-ting-zhong-528494397" target="_blank" rel="noopener">
+            LinkedIn：min-ting-zhong
+          </a>
+        </p>
+
+        <p>
+          🏫 <a href="https://acade.must.edu.tw/index.aspx?UnitID=1241" target="_blank" rel="noopener">
+            明新科技大學｜雙語教育中心（官方頁面）
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <button id="backToTop">↑</button>
+  <script src="script.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const filterButtons = document.querySelectorAll(".ce-filter-toggle button");
+  const sections = document.querySelectorAll(".ce-section");
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const filter = btn.dataset.filter;
+
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      sections.forEach(section => {
+        if (filter === "all") {
+          section.style.display = "";
+        } else {
+          section.style.display =
+            section.dataset.type === filter ? "" : "none";
+        }
+      });
+
+      if (typeof updateCounts === "function") {
+        updateCounts();
+      }
+    });
+  });
+
+});
+</script>
+</body>
+</html>

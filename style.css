@@ -1,0 +1,506 @@
+:root {
+  --bg-main: #FAF8F4;
+  --bg-card: #FFFFFF;
+  --accent: #DDB892;
+  --muted: #C7C8C4;
+  --text-main: #2B2B2B;
+  --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.08);
+  --radius-card: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* 語言切換按鈕 */
+#lang-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 96px 20px 80px;
+  background: linear-gradient(135deg, rgba(221, 184, 146, 0.9), rgba(199, 200, 196, 0.85));
+  color: #fff;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-photo { flex: 0 0 220px; display: flex; justify-content: center; }
+.hero-photo img {
+  width: 220px; height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.hero-content { flex: 1 1 320px; }
+.hero-name { font-size: 32px; margin: 0 0 8px; }
+.hero-role { font-size: 18px; margin: 0 0 16px; opacity: 0.9; }
+
+.hero-tagline { font-size: 15px; max-width: 640px; }
+
+.hero-cta { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-cta a {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.92);
+  color: #2b2b2b;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hero-cta a:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(0,0,0,0.25); }
+.hero-cta a.ghost { background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.5); }
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.85);
+  z-index: 2;
+}
+.scroll-indicator .line {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.85);
+  margin-top: 6px;
+  animation: scrollLine 1.6s infinite ease-in-out;
+}
+@keyframes scrollLine {
+  0% { opacity: 0; transform: translateY(0); }
+  40% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+
+/* Section */
+.section { padding: 120px 20px 88px; }
+.section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  padding: 32px 28px 32px;
+}
+.section-inner h3 { margin-top: 0; margin-bottom: 24px; font-size: 22px; }
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+.skill-card {
+  background: linear-gradient(135deg, #ffffff, #f4ede4);
+  border-radius: 14px;
+  padding: 16px 14px;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
+  background: linear-gradient(135deg, #fff8ec, #f1e1cf);
+}
+
+/* ===== Timeline (details version) ===== */
+
+.timeline {
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 28px;
+  padding-left: 4px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 14px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(221, 184, 146, 0.25);
+}
+
+.timeline-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 4px 24px 4px 0;
+  list-style: none;
+}
+
+.timeline-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.timeline-item summary::after {
+  content: "＋";
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-weight: 700;
+}
+
+.timeline-item[open] summary::after {
+  content: "－";
+}
+
+.timeline-item .content {
+  margin-top: 8px;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.project-card {
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  background: #f4ede4;
+  border-radius: 14px;
+  padding: 16px 16px 18px;
+  font-size: 14px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+.project-card h4 { margin: 0 0 4px; font-size: 15px; }
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.18);
+  background: #f1e1cf;
+}
+
+/* Certifications */
+#certifications h3 span { font-size: 14px; font-weight: 400; color: #eee; }
+.cert-intro { max-width: 720px; font-size: 14px; line-height: 1.8; margin-bottom: 28px; color: #333; }
+
+.cert-groups details {
+  background: #f7f3ed;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: background 0.2s ease;
+}
+.cert-groups details[open] { background: #f1e1cf; }
+
+.cert-groups summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  list-style: none;
+}
+.cert-groups summary::-webkit-details-marker { display: none; }
+
+.cert-groups ul { margin-top: 10px; padding-left: 18px; font-size: 14px; }
+.cert-groups li { margin-bottom: 6px; }
+.cert-note { margin-top: 18px; font-size: 13px; color: #555; }
+
+/* Extra course links */
+.course-links {
+  margin-top: 12px;
+  padding-left: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px 14px;
+}
+.course-links a { color: #6a4e2d; text-decoration: none; }
+.course-links a:hover { text-decoration: underline; }
+
+/* Contact */
+#contact a { color: #6a4e2d; text-decoration: none; }
+#contact a:hover { text-decoration: underline; }
+
+/* Back to top */
+#backToTop {
+  position: fixed;
+  right: 24px;
+  bottom: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(221, 184, 146, 0.9);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  z-index: 999;
+}
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#backToTop:hover { background: #d1a56f; }
+
+/* RWD */
+@media (max-width: 768px) {
+  .hero-inner { flex-direction: column; text-align: center; }
+  .section-inner { padding: 24px 18px 26px; }
+}
+/* ===== Course vs Certification Visual Layer ===== */
+.ce-section {
+  margin-bottom: 28px;
+  padding: 18px 20px;
+  border-radius: 16px;
+}
+
+/* 課程區塊 */
+.ce-section[data-type="course"] {
+  background: #faf8f4;
+  border-left: 6px solid #c9a96a;
+}
+
+/* 證書區塊 */
+.ce-section[data-type="cert"] {
+  background: #f4f7fb;
+  border-left: 6px solid #5b8bd9;
+}
+
+/* summary 補強 */
+.ce-section summary {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.ce-sub {
+  font-weight: 400;
+  font-size: 13px;
+  color: #555;
+  margin-left: 4px;
+}
+
+/* 證書 tag 再明顯一點 */
+.ce-section[data-type="cert"] .ce-tag {
+  background: #dbe7ff;
+  color: #274a8a;
+}
+
+/* 課程 tag 維持你原本溫暖色 */
+.ce-section[data-type="course"] .ce-tag {
+  background: #e6d3b1;
+  color: #5a4325;
+}
+.ce-filter-toggle {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 26px;
+  flex-wrap: wrap;
+}
+
+.ce-filter-toggle button {
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.ce-filter-toggle button.active {
+  background: #2e4a68;
+  color: #fff;
+  border-color: #2e4a68;
+}
+.ce-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin: 0 0 28px;
+  padding: 12px 14px;
+  background: #f6f7f9;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.ce-toc strong {
+  margin-right: 10px;
+}
+
+.ce-toc a {
+  color: #2e4a68;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.ce-toc a:hover {
+  background: #2e4a68;
+  color: #fff;
+  border-color: #2e4a68;
+}
+/* ===== Global Custom Cursor (Rita) ===== */
+html, body, * {
+  cursor: url("cursor-rita.png") 16 16, auto !important;
+}
+/* ===== Cursor Micro Interaction (CSS only) ===== */
+
+/* hover 可互動元素時，整體感覺更「立體」 */
+a:hover,
+button:hover,
+summary:hover,
+.ce-list li:hover {
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.25));
+}
+
+/* 微呼吸動畫（極輕量） */
+@keyframes cursor-breath {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* hover 時才啟動動畫（避免耗效能） */
+a:hover,
+button:hover,
+summary:hover {
+  animation: cursor-breath 0.9s ease-in-out infinite;
+}
+/* ===== Certificate Area Cursor Accent ===== */
+
+/* 證書區 hover 效果更明確 */
+.ce-section[data-type="cert"] a:hover {
+  filter: drop-shadow(0 0 4px rgba(180, 120, 40, 0.6));
+}
+
+/* 證書區文字微上浮（讓游標更有回饋） */
+.ce-section[data-type="cert"] li:hover {
+  transform: translateY(-1px);
+  transition: transform 0.15s ease;
+}
+/* 滑入證書區，整區氣氛略暖 */
+.ce-section[data-type="cert"] {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 248, 235, 0.6),
+    rgba(255, 255, 255, 0)
+  );
+}
+/* ===== Course Area Style ===== */
+
+.ce-section[data-type="course"] .ce-tag {
+  background: #e6edf7;
+  color: #2c4a7a;
+}
+
+.ce-section[data-type="course"] a:hover {
+  filter: drop-shadow(0 0 3px rgba(60, 120, 200, 0.35));
+}
+
+.ce-section[data-type="course"] li:hover {
+  transform: translateY(-1px);
+  transition: transform 0.15s ease;
+}
+/* ===== Certificate Area Style ===== */
+
+.ce-section[data-type="cert"] .ce-tag {
+  background: linear-gradient(135deg, #f5e6c8, #e2c58a);
+  color: #5a3e00;
+  font-weight: 600;
+}
+
+.ce-section[data-type="cert"] a:hover {
+  filter: drop-shadow(0 0 4px rgba(180, 120, 40, 0.6));
+}
+
+.ce-section[data-type="cert"] li:hover {
+  transform: translateY(-2px);
+  transition: transform 0.15s ease;
+}
+/* ===== Cursor Semantic Feedback ===== */
+
+/* 課程區 hover：柔和 */
+.ce-section[data-type="course"] a:hover,
+.ce-section[data-type="course"] summary:hover {
+  animation: cursor-breath-soft 0.9s ease-in-out infinite;
+}
+
+@keyframes cursor-breath-soft {
+  0%   { filter: brightness(1); }
+  50%  { filter: brightness(1.05); }
+  100% { filter: brightness(1); }
+}
+
+/* 證書區 hover：更明確 */
+.ce-section[data-type="cert"] a:hover,
+.ce-section[data-type="cert"] summary:hover {
+  animation: cursor-breath-strong 0.8s ease-in-out infinite;
+}
+
+@keyframes cursor-breath-strong {
+  0%   { filter: brightness(1); }
+  50%  { filter: brightness(1.12); }
+  100% { filter: brightness(1); }
+}
+/* ===== FIX: Experience Timeline Click ===== */
+
+.timeline-item .toggle {
+  cursor: pointer !important;
+  position: relative;
+  z-index: 5;
+  pointer-events: auto;
+}
+/* 避免 hover filter / animation 吃掉點擊 */
+.timeline-item {
+  filter: none !important;
+  animation: none !important;
+}
