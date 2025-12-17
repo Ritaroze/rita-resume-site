@@ -1,11 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ===== Timeline 展開收合 ===== */
-  document.querySelectorAll(".timeline-item .toggle").forEach(toggleEl => {
-    toggleEl.addEventListener("click", () => {
-      toggleEl.parentElement.classList.toggle("open");
-    });
-  });
 
   /* ===== 回到頁首按鈕 ===== */
   const backToTopBtn = document.getElementById("backToTop");
