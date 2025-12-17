@@ -152,7 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
-<<<<<<< HEAD
 /* ===== Continuing Education: Search Filter ===== */
 const ceSearchInput = document.getElementById("ceSearchInput");
 
@@ -258,5 +257,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 </script>
-=======
->>>>>>> e8df777e9a8f6a43519fc62e3d426d990cbd15b1
